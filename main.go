@@ -43,17 +43,5 @@ func main() {
 		fillingNewArray(&answer)
 	}
 }
-func checkNeighbors(array *[width][length]int, i int, j int) int {
-	count := 0
-	for k := i - 1; k <= i+1; k++ {
-		for p := j - 1; p <= j+1; p++ {
-			if k >= 0 && k < width && p >= 0 && p < length {
-				if array[k][p] == 1 {
-					count += 1
-				}
-			}
-		}
-	}
-	count -= array[i][j]
-	return count
-}
+
+

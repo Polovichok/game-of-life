@@ -39,3 +39,18 @@ func fillingNewArray(array *[width][length]int) [width][length]int {
 	}
 	return *array
 }
+
+func checkNeighbors(array *[width][length]int, i int, j int) int {
+	count := 0
+	for k := i - 1; k <= i+1; k++ {
+		for p := j - 1; p <= j+1; p++ {
+			if k >= 0 && k < width && p >= 0 && p < length {
+				if array[k][p] == 1 {
+					count += 1
+				}
+			}
+		}
+	}
+	count -= array[i][j]
+	return count
+}
