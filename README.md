@@ -14,6 +14,13 @@ In my version of the game, a separate PNG file is created for each step of the e
 - The grid is represented by a 2D array of cells.  
 - For each step of evolution, a separate PNG image is generated and saved in the `assets` directory.  
 
+## How to Run the Program
+Make sure Go (Golang) is installed on your computer.  
+To run the program, execute the following command:
+
+```bash
+go run main.go array.go image.go
+
 ## Creating an Animation
 To create an animation from the PNG files, you can use `ffmpeg`. Here is an example of how to do this:
 
