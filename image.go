@@ -8,9 +8,9 @@ import (
 )
 
 func createImage() (string, *image.RGBA) {
-	new_png_file := "e:/prog-projects/go-projects/game-of-life/assets/rectangle.png"
+	new_png_file := "assets/rectangle.png"
 	myImage := image.NewRGBA(image.Rect(0, 0, length, width))
-	myGrey := color.RGBA{160, 160, 160, 160}
+	myGrey := color.RGBA{128, 128, 128, 255}
 	draw.Draw(myImage, myImage.Bounds(), &image.Uniform{myGrey}, image.Point{}, draw.Src)
 	return new_png_file, myImage
 }

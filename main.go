@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/fogleman/gg"
 	"image/png"
+	"log"
 	"os"
 )
 
@@ -15,12 +16,16 @@ const (
 )
 
 func main() {
+	if err := os.Mkdir("assets", os.ModePerm); err != nil {
+		log.Fatal(err)
+	}
+
 	answer := createArray()
 	fillingArray(&answer)
 
 	for frame := 0; frame < frameNumber; frame++ {
 
-		new_png_file := fmt.Sprintf("e:/prog-projects/go-projects/game-of-life/assets/frame_%d.png", frame)
+		new_png_file := fmt.Sprintf("assets/frame_%d.png", frame)
 
 		_, myImage := createImage()
 		drawSquares(&answer, myImage)
@@ -43,5 +48,3 @@ func main() {
 		fillingNewArray(&answer)
 	}
 }
-
-
