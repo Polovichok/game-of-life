@@ -15,7 +15,7 @@ In my version of the game, a separate PNG file is created for each step of the e
 - For each step of evolution, a separate PNG image is generated and saved in the `assets` directory.  
 
 ## How to Run the Program
-Make sure Go (Golang) is installed on your computer.  
+Make sure Golang is installed on your computer.  
 To run the program, execute the following command:
 
 ```bash
